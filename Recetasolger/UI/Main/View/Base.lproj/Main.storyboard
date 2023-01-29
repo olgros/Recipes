@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Recetas de cocina-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="MainView" title="Recetas de cocina" id="BYZ-38-t0r" customClass="MainView" customModule="Recetasolger" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="opX-gO-fPv">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="xem-Zu-LuA">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="51"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </searchBar>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="KhI-UK-RpX">
+                                        <rect key="frame" x="0.0" y="51" width="414" height="767"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </tableView>
+                                </subviews>
+                                <color key="backgroundColor" name="BackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="KhI-UK-RpX" firstAttribute="leading" secondItem="opX-gO-fPv" secondAttribute="leading" id="82E-m7-q9R"/>
+                                    <constraint firstAttribute="trailing" secondItem="xem-Zu-LuA" secondAttribute="trailing" id="S1s-oQ-Lh1"/>
+                                    <constraint firstAttribute="trailing" secondItem="KhI-UK-RpX" secondAttribute="trailing" id="jJ9-cR-mxV"/>
+                                    <constraint firstItem="xem-Zu-LuA" firstAttribute="leading" secondItem="opX-gO-fPv" secondAttribute="leading" id="nTm-CO-n1g"/>
+                                    <constraint firstAttribute="bottom" secondItem="KhI-UK-RpX" secondAttribute="bottom" id="nyp-oF-QRj"/>
+                                    <constraint firstItem="KhI-UK-RpX" firstAttribute="top" secondItem="xem-Zu-LuA" secondAttribute="bottom" id="v9I-dD-IpC"/>
+                                    <constraint firstItem="xem-Zu-LuA" firstAttribute="top" secondItem="opX-gO-fPv" secondAttribute="top" id="vaI-bJ-rPJ"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" name="BackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="opX-gO-fPv" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="0lQ-P8-rE7"/>
+                            <constraint firstItem="opX-gO-fPv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="RB3-Zv-4dR"/>
+                            <constraint firstItem="opX-gO-fPv" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="gG6-bP-TVE"/>
+                            <constraint firstItem="opX-gO-fPv" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="oDZ-CT-S26"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="searchBar" destination="xem-Zu-LuA" id="PFH-Je-5pl"/>
+                        <outlet property="tableView" destination="KhI-UK-RpX" id="yUi-eY-XCJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="28.985507246376812" y="69.642857142857139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="BackgroundColor">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

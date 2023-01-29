@@ -9,13 +9,68 @@
 /* Begin PBXBuildFile section */
 		4BAC71292986AE380074FF6D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BAC71282986AE380074FF6D /* AppDelegate.swift */; };
 		4BAC712B2986AE380074FF6D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BAC712A2986AE380074FF6D /* SceneDelegate.swift */; };
-		4BAC712D2986AE380074FF6D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BAC712C2986AE380074FF6D /* ViewController.swift */; };
 		4BAC71302986AE380074FF6D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BAC712E2986AE380074FF6D /* Main.storyboard */; };
 		4BAC71322986AE390074FF6D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4BAC71312986AE390074FF6D /* Assets.xcassets */; };
 		4BAC71352986AE390074FF6D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BAC71332986AE390074FF6D /* LaunchScreen.storyboard */; };
 		4BAC71402986AE390074FF6D /* RecetasolgerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BAC713F2986AE390074FF6D /* RecetasolgerTests.swift */; };
 		4BAC714A2986AE390074FF6D /* RecetasolgerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BAC71492986AE390074FF6D /* RecetasolgerUITests.swift */; };
 		4BAC714C2986AE390074FF6D /* RecetasolgerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BAC714B2986AE390074FF6D /* RecetasolgerUITestsLaunchTests.swift */; };
+		4BAC715A2986AEC40074FF6D /* EndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BAC71592986AEC40074FF6D /* EndPoint.swift */; };
+		4BAC715D2986AF500074FF6D /* RestClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BAC715C2986AF500074FF6D /* RestClient.swift */; };
+		4BAC715F2986B15D0074FF6D /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BAC715E2986B15D0074FF6D /* Configuration.swift */; };
+		4BAC71612986B23A0074FF6D /* CustomError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BAC71602986B23A0074FF6D /* CustomError.swift */; };
+		4BAC71632986B3020074FF6D /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BAC71622986B3020074FF6D /* NetworkManager.swift */; };
+		4BAC71662986B3400074FF6D /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BAC71652986B3400074FF6D /* Log.swift */; };
+		4BAC71682986B7700074FF6D /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BAC71672986B7700074FF6D /* NetworkMonitor.swift */; };
+		4BAC716A2986B7E00074FF6D /* DictionaryEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BAC71692986B7E00074FF6D /* DictionaryEncoder.swift */; };
+		4BAC716C2986B8190074FF6D /* NetworkManager+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BAC716B2986B8190074FF6D /* NetworkManager+Extensions.swift */; };
+		4BAC71712986B94B0074FF6D /* RecetasRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BAC71702986B94B0074FF6D /* RecetasRepository.swift */; };
+		4BAC71742986B99C0074FF6D /* Receta.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BAC71732986B99C0074FF6D /* Receta.swift */; };
+		4BAC71762986B9EC0074FF6D /* Ubication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BAC71752986B9EC0074FF6D /* Ubication.swift */; };
+		4BAC71782986BAA00074FF6D /* RecetasRepositoryImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BAC71772986BAA00074FF6D /* RecetasRepositoryImp.swift */; };
+		4BAC717B2986BC4F0074FF6D /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BAC717A2986BC4F0074FF6D /* Coordinator.swift */; };
+		4BAC717D2986BC6C0074FF6D /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BAC717C2986BC6C0074FF6D /* Storyboarded.swift */; };
+		4BAC717F2986BC950074FF6D /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BAC717E2986BC950074FF6D /* MainCoordinator.swift */; };
+		4BAC71832986BD7F0074FF6D /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BAC71822986BD7F0074FF6D /* MainView.swift */; };
+		4BAC71852986BF050074FF6D /* MainViewModelImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BAC71842986BF050074FF6D /* MainViewModelImp.swift */; };
+		4BAC71882986C3FA0074FF6D /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BAC71872986C3FA0074FF6D /* ViewModel.swift */; };
+		4BAC718A2986C44C0074FF6D /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BAC71892986C44C0074FF6D /* BaseViewController.swift */; };
+		4BAC718C2986C5D00074FF6D /* SwiftSpinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BAC718B2986C5D00074FF6D /* SwiftSpinner.swift */; };
+		4BAC71912986D13A0074FF6D /* RecetasUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BAC71902986D13A0074FF6D /* RecetasUseCase.swift */; };
+		4BAC71932986D1B80074FF6D /* RecetasUseCaseImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BAC71922986D1B80074FF6D /* RecetasUseCaseImp.swift */; };
+		4BAC71952986D3930074FF6D /* RecetasProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BAC71942986D3930074FF6D /* RecetasProtocol.swift */; };
+		4BAC71972986D44E0074FF6D /* UseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BAC71962986D44E0074FF6D /* UseCase.swift */; };
+		4BAC71992986D9140074FF6D /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BAC71982986D9140074FF6D /* MainViewModel.swift */; };
+		4BAC719B2986D9490074FF6D /* MainCoordiantorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BAC719A2986D9490074FF6D /* MainCoordiantorProtocol.swift */; };
+		4BAC719F2986DD460074FF6D /* RecetaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BAC719D2986DD460074FF6D /* RecetaTableViewCell.swift */; };
+		4BAC71A02986DD460074FF6D /* RecetaTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4BAC719E2986DD460074FF6D /* RecetaTableViewCell.xib */; };
+		4BAC71A72986E75C0074FF6D /* Detail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BAC71A62986E75C0074FF6D /* Detail.storyboard */; };
+		4BAC71A92986E8580074FF6D /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BAC71A82986E8570074FF6D /* DetailView.swift */; };
+		4BAC71AB2986E9CD0074FF6D /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BAC71AA2986E9CD0074FF6D /* DetailViewModel.swift */; };
+		4BAC71AE2986EA400074FF6D /* DetailProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BAC71AD2986EA400074FF6D /* DetailProtocol.swift */; };
+		4BAC71B02986EA610074FF6D /* DetailUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BAC71AF2986EA610074FF6D /* DetailUseCase.swift */; };
+		4BAC71B32986EA980074FF6D /* DetailRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BAC71B22986EA980074FF6D /* DetailRepository.swift */; };
+		4BAC71B52986EAD90074FF6D /* DetailRepositoryImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BAC71B42986EAD90074FF6D /* DetailRepositoryImp.swift */; };
+		4BAC71B72986EB6C0074FF6D /* DetailUseCaseImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BAC71B62986EB6C0074FF6D /* DetailUseCaseImp.swift */; };
+		4BAC71B92986EC6D0074FF6D /* DetailViewModelImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BAC71B82986EC6D0074FF6D /* DetailViewModelImp.swift */; };
+		4BAC71BC298702840074FF6D /* RecetaData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BAC71BB298702840074FF6D /* RecetaData.swift */; };
+		4BAC71BF298705D80074FF6D /* UIButtonAccent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BAC71BE298705D80074FF6D /* UIButtonAccent.swift */; };
+		4BAC71C12987074B0074FF6D /* UILabelMultilineTop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BAC71C02987074B0074FF6D /* UILabelMultilineTop.swift */; };
+		4BAC71C729870A930074FF6D /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BAC71C629870A930074FF6D /* MapViewModel.swift */; };
+		4BAC71C929870AF00074FF6D /* MapViewModelImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BAC71C829870AF00074FF6D /* MapViewModelImp.swift */; };
+		4BAC71CB29870BE30074FF6D /* Map.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BAC71CA29870BE30074FF6D /* Map.storyboard */; };
+		4BAC71CD29870BF00074FF6D /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BAC71CC29870BF00074FF6D /* MapView.swift */; };
+		4BAC71CF29870D3E0074FF6D /* DetailCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BAC71CE29870D3E0074FF6D /* DetailCoordinatorProtocol.swift */; };
+		4BAC71D329870E4E0074FF6D /* CommonCoordiantorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BAC71D229870E4E0074FF6D /* CommonCoordiantorProtocol.swift */; };
+		4BAC71D5298710E40074FF6D /* MapCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BAC71D4298710E40074FF6D /* MapCoordinatorProtocol.swift */; };
+		4BAC71D72987131D0074FF6D /* RecetaAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BAC71D62987131D0074FF6D /* RecetaAnnotation.swift */; };
+		4BAC71DA29872CD70074FF6D /* MainViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BAC71D929872CD70074FF6D /* MainViewModelTests.swift */; };
+		4BAC71DC2987348F0074FF6D /* DetailViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BAC71DB2987348F0074FF6D /* DetailViewModelTests.swift */; };
+		4BAC71DF2987372A0074FF6D /* RecetasUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BAC71DE2987372A0074FF6D /* RecetasUseCaseTests.swift */; };
+		4BAC71E12987384C0074FF6D /* DetailUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BAC71E02987384C0074FF6D /* DetailUseCaseTests.swift */; };
+		770854C939BF889E47B18841 /* Pods_RecetasolgerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D3EE4F8F8183E07A8A62C85 /* Pods_RecetasolgerTests.framework */; };
+		7C67D7C895F08BD1C61755FB /* Pods_Recetasolger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46AD3B518530F35AB8382EDA /* Pods_Recetasolger.framework */; };
+		CC0D06A47BE31B3F2995F0D8 /* Pods_Recetasolger_RecetasolgerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36B99DED5F76293A690F3380 /* Pods_Recetasolger_RecetasolgerUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,10 +91,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1D3EE4F8F8183E07A8A62C85 /* Pods_RecetasolgerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RecetasolgerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		32594D2CF5E6532A44C4522B /* Pods-Recetasolger.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Recetasolger.debug.xcconfig"; path = "Target Support Files/Pods-Recetasolger/Pods-Recetasolger.debug.xcconfig"; sourceTree = "<group>"; };
+		36B99DED5F76293A690F3380 /* Pods_Recetasolger_RecetasolgerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Recetasolger_RecetasolgerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3EF1495B394549485D20DC13 /* Pods-Recetasolger-RecetasolgerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Recetasolger-RecetasolgerUITests.debug.xcconfig"; path = "Target Support Files/Pods-Recetasolger-RecetasolgerUITests/Pods-Recetasolger-RecetasolgerUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		46AD3B518530F35AB8382EDA /* Pods_Recetasolger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Recetasolger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BAC71252986AE380074FF6D /* Recetasolger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Recetasolger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BAC71282986AE380074FF6D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4BAC712A2986AE380074FF6D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		4BAC712C2986AE380074FF6D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4BAC712F2986AE380074FF6D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4BAC71312986AE390074FF6D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4BAC71342986AE390074FF6D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +108,64 @@
 		4BAC71452986AE390074FF6D /* RecetasolgerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RecetasolgerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BAC71492986AE390074FF6D /* RecetasolgerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecetasolgerUITests.swift; sourceTree = "<group>"; };
 		4BAC714B2986AE390074FF6D /* RecetasolgerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecetasolgerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		4BAC71592986AEC40074FF6D /* EndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoint.swift; sourceTree = "<group>"; };
+		4BAC715C2986AF500074FF6D /* RestClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestClient.swift; sourceTree = "<group>"; };
+		4BAC715E2986B15D0074FF6D /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
+		4BAC71602986B23A0074FF6D /* CustomError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomError.swift; sourceTree = "<group>"; };
+		4BAC71622986B3020074FF6D /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		4BAC71652986B3400074FF6D /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
+		4BAC71672986B7700074FF6D /* NetworkMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitor.swift; sourceTree = "<group>"; };
+		4BAC71692986B7E00074FF6D /* DictionaryEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryEncoder.swift; sourceTree = "<group>"; };
+		4BAC716B2986B8190074FF6D /* NetworkManager+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkManager+Extensions.swift"; sourceTree = "<group>"; };
+		4BAC71702986B94B0074FF6D /* RecetasRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecetasRepository.swift; sourceTree = "<group>"; };
+		4BAC71732986B99C0074FF6D /* Receta.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Receta.swift; sourceTree = "<group>"; };
+		4BAC71752986B9EC0074FF6D /* Ubication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ubication.swift; sourceTree = "<group>"; };
+		4BAC71772986BAA00074FF6D /* RecetasRepositoryImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecetasRepositoryImp.swift; sourceTree = "<group>"; };
+		4BAC717A2986BC4F0074FF6D /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		4BAC717C2986BC6C0074FF6D /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
+		4BAC717E2986BC950074FF6D /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		4BAC71822986BD7F0074FF6D /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		4BAC71842986BF050074FF6D /* MainViewModelImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModelImp.swift; sourceTree = "<group>"; };
+		4BAC71872986C3FA0074FF6D /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		4BAC71892986C44C0074FF6D /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		4BAC718B2986C5D00074FF6D /* SwiftSpinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftSpinner.swift; sourceTree = "<group>"; };
+		4BAC71902986D13A0074FF6D /* RecetasUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecetasUseCase.swift; sourceTree = "<group>"; };
+		4BAC71922986D1B80074FF6D /* RecetasUseCaseImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecetasUseCaseImp.swift; sourceTree = "<group>"; };
+		4BAC71942986D3930074FF6D /* RecetasProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecetasProtocol.swift; sourceTree = "<group>"; };
+		4BAC71962986D44E0074FF6D /* UseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCase.swift; sourceTree = "<group>"; };
+		4BAC71982986D9140074FF6D /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		4BAC719A2986D9490074FF6D /* MainCoordiantorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordiantorProtocol.swift; sourceTree = "<group>"; };
+		4BAC719D2986DD460074FF6D /* RecetaTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecetaTableViewCell.swift; sourceTree = "<group>"; };
+		4BAC719E2986DD460074FF6D /* RecetaTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecetaTableViewCell.xib; sourceTree = "<group>"; };
+		4BAC71A62986E75C0074FF6D /* Detail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Detail.storyboard; sourceTree = "<group>"; };
+		4BAC71A82986E8570074FF6D /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		4BAC71AA2986E9CD0074FF6D /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
+		4BAC71AD2986EA400074FF6D /* DetailProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailProtocol.swift; sourceTree = "<group>"; };
+		4BAC71AF2986EA610074FF6D /* DetailUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailUseCase.swift; sourceTree = "<group>"; };
+		4BAC71B22986EA980074FF6D /* DetailRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailRepository.swift; sourceTree = "<group>"; };
+		4BAC71B42986EAD90074FF6D /* DetailRepositoryImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailRepositoryImp.swift; sourceTree = "<group>"; };
+		4BAC71B62986EB6C0074FF6D /* DetailUseCaseImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailUseCaseImp.swift; sourceTree = "<group>"; };
+		4BAC71B82986EC6D0074FF6D /* DetailViewModelImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModelImp.swift; sourceTree = "<group>"; };
+		4BAC71BB298702840074FF6D /* RecetaData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecetaData.swift; sourceTree = "<group>"; };
+		4BAC71BE298705D80074FF6D /* UIButtonAccent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonAccent.swift; sourceTree = "<group>"; };
+		4BAC71C02987074B0074FF6D /* UILabelMultilineTop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabelMultilineTop.swift; sourceTree = "<group>"; };
+		4BAC71C629870A930074FF6D /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
+		4BAC71C829870AF00074FF6D /* MapViewModelImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModelImp.swift; sourceTree = "<group>"; };
+		4BAC71CA29870BE30074FF6D /* Map.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Map.storyboard; sourceTree = "<group>"; };
+		4BAC71CC29870BF00074FF6D /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		4BAC71CE29870D3E0074FF6D /* DetailCoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCoordinatorProtocol.swift; sourceTree = "<group>"; };
+		4BAC71D229870E4E0074FF6D /* CommonCoordiantorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonCoordiantorProtocol.swift; sourceTree = "<group>"; };
+		4BAC71D4298710E40074FF6D /* MapCoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapCoordinatorProtocol.swift; sourceTree = "<group>"; };
+		4BAC71D62987131D0074FF6D /* RecetaAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecetaAnnotation.swift; sourceTree = "<group>"; };
+		4BAC71D929872CD70074FF6D /* MainViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModelTests.swift; sourceTree = "<group>"; };
+		4BAC71DB2987348F0074FF6D /* DetailViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModelTests.swift; sourceTree = "<group>"; };
+		4BAC71DE2987372A0074FF6D /* RecetasUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecetasUseCaseTests.swift; sourceTree = "<group>"; };
+		4BAC71E02987384C0074FF6D /* DetailUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailUseCaseTests.swift; sourceTree = "<group>"; };
+		4BAC71E2298739240074FF6D /* Readme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Readme.md; sourceTree = "<group>"; };
+		94D65A5EABF011CE6593A9CD /* Pods-Recetasolger-RecetasolgerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Recetasolger-RecetasolgerUITests.release.xcconfig"; path = "Target Support Files/Pods-Recetasolger-RecetasolgerUITests/Pods-Recetasolger-RecetasolgerUITests.release.xcconfig"; sourceTree = "<group>"; };
+		A8B14BCC9833D9D87C1CA8B6 /* Pods-RecetasolgerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RecetasolgerTests.debug.xcconfig"; path = "Target Support Files/Pods-RecetasolgerTests/Pods-RecetasolgerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		ADC0395244F82FBB81321D8E /* Pods-RecetasolgerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RecetasolgerTests.release.xcconfig"; path = "Target Support Files/Pods-RecetasolgerTests/Pods-RecetasolgerTests.release.xcconfig"; sourceTree = "<group>"; };
+		B2F01E703ECB4682CC3C9766 /* Pods-Recetasolger.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Recetasolger.release.xcconfig"; path = "Target Support Files/Pods-Recetasolger/Pods-Recetasolger.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +173,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C67D7C895F08BD1C61755FB /* Pods_Recetasolger.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +181,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				770854C939BF889E47B18841 /* Pods_RecetasolgerTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,19 +189,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC0D06A47BE31B3F2995F0D8 /* Pods_Recetasolger_RecetasolgerUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		221847DCB1A0F7512D2B2AD7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				32594D2CF5E6532A44C4522B /* Pods-Recetasolger.debug.xcconfig */,
+				B2F01E703ECB4682CC3C9766 /* Pods-Recetasolger.release.xcconfig */,
+				3EF1495B394549485D20DC13 /* Pods-Recetasolger-RecetasolgerUITests.debug.xcconfig */,
+				94D65A5EABF011CE6593A9CD /* Pods-Recetasolger-RecetasolgerUITests.release.xcconfig */,
+				A8B14BCC9833D9D87C1CA8B6 /* Pods-RecetasolgerTests.debug.xcconfig */,
+				ADC0395244F82FBB81321D8E /* Pods-RecetasolgerTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		4BAC711C2986AE380074FF6D = {
 			isa = PBXGroup;
 			children = (
+				4BAC71E2298739240074FF6D /* Readme.md */,
 				4BAC71272986AE380074FF6D /* Recetasolger */,
 				4BAC713E2986AE390074FF6D /* RecetasolgerTests */,
 				4BAC71482986AE390074FF6D /* RecetasolgerUITests */,
 				4BAC71262986AE380074FF6D /* Products */,
+				221847DCB1A0F7512D2B2AD7 /* Pods */,
+				A81412C6F0619C9A553A88A5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,10 +235,15 @@
 		4BAC71272986AE380074FF6D /* Recetasolger */ = {
 			isa = PBXGroup;
 			children = (
+				4BAC718F2986D1180074FF6D /* Domain */,
+				4BAC71802986BCD50074FF6D /* UI */,
+				4BAC71792986BC2D0074FF6D /* Coordinator */,
+				4BAC716E2986B9110074FF6D /* Repositories */,
+				4BAC71642986B32E0074FF6D /* Utils */,
+				4BAC715B2986AEE60074FF6D /* Config */,
+				4BAC71582986AE830074FF6D /* Services */,
 				4BAC71282986AE380074FF6D /* AppDelegate.swift */,
 				4BAC712A2986AE380074FF6D /* SceneDelegate.swift */,
-				4BAC712C2986AE380074FF6D /* ViewController.swift */,
-				4BAC712E2986AE380074FF6D /* Main.storyboard */,
 				4BAC71312986AE390074FF6D /* Assets.xcassets */,
 				4BAC71332986AE390074FF6D /* LaunchScreen.storyboard */,
 				4BAC71362986AE390074FF6D /* Info.plist */,
@@ -113,6 +254,8 @@
 		4BAC713E2986AE390074FF6D /* RecetasolgerTests */ = {
 			isa = PBXGroup;
 			children = (
+				4BAC71DD298737140074FF6D /* UseCase */,
+				4BAC71D829872CC40074FF6D /* ViewModel */,
 				4BAC713F2986AE390074FF6D /* RecetasolgerTests.swift */,
 			);
 			path = RecetasolgerTests;
@@ -127,6 +270,277 @@
 			path = RecetasolgerUITests;
 			sourceTree = "<group>";
 		};
+		4BAC71582986AE830074FF6D /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				4BAC716D2986B88F0074FF6D /* Api */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		4BAC715B2986AEE60074FF6D /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				4BAC715E2986B15D0074FF6D /* Configuration.swift */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		4BAC71642986B32E0074FF6D /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				4BAC71652986B3400074FF6D /* Log.swift */,
+				4BAC71672986B7700074FF6D /* NetworkMonitor.swift */,
+				4BAC71692986B7E00074FF6D /* DictionaryEncoder.swift */,
+				4BAC718B2986C5D00074FF6D /* SwiftSpinner.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		4BAC716D2986B88F0074FF6D /* Api */ = {
+			isa = PBXGroup;
+			children = (
+				4BAC716B2986B8190074FF6D /* NetworkManager+Extensions.swift */,
+				4BAC71622986B3020074FF6D /* NetworkManager.swift */,
+				4BAC71602986B23A0074FF6D /* CustomError.swift */,
+				4BAC715C2986AF500074FF6D /* RestClient.swift */,
+				4BAC71592986AEC40074FF6D /* EndPoint.swift */,
+			);
+			path = Api;
+			sourceTree = "<group>";
+		};
+		4BAC716E2986B9110074FF6D /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				4BAC71BA298702730074FF6D /* Models */,
+				4BAC71B12986EA840074FF6D /* Detail */,
+				4BAC71722986B97E0074FF6D /* DTO */,
+				4BAC716F2986B92B0074FF6D /* Recetas */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		4BAC716F2986B92B0074FF6D /* Recetas */ = {
+			isa = PBXGroup;
+			children = (
+				4BAC71702986B94B0074FF6D /* RecetasRepository.swift */,
+				4BAC71772986BAA00074FF6D /* RecetasRepositoryImp.swift */,
+			);
+			path = Recetas;
+			sourceTree = "<group>";
+		};
+		4BAC71722986B97E0074FF6D /* DTO */ = {
+			isa = PBXGroup;
+			children = (
+				4BAC71732986B99C0074FF6D /* Receta.swift */,
+				4BAC71752986B9EC0074FF6D /* Ubication.swift */,
+			);
+			path = DTO;
+			sourceTree = "<group>";
+		};
+		4BAC71792986BC2D0074FF6D /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				4BAC717A2986BC4F0074FF6D /* Coordinator.swift */,
+				4BAC717C2986BC6C0074FF6D /* Storyboarded.swift */,
+				4BAC717E2986BC950074FF6D /* MainCoordinator.swift */,
+				4BAC719A2986D9490074FF6D /* MainCoordiantorProtocol.swift */,
+				4BAC71CE29870D3E0074FF6D /* DetailCoordinatorProtocol.swift */,
+				4BAC71D229870E4E0074FF6D /* CommonCoordiantorProtocol.swift */,
+				4BAC71D4298710E40074FF6D /* MapCoordinatorProtocol.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		4BAC71802986BCD50074FF6D /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				4BAC71C329870A5C0074FF6D /* Map */,
+				4BAC71BD298705AB0074FF6D /* Commons */,
+				4BAC71A32986E7320074FF6D /* Detail */,
+				4BAC71862986BF150074FF6D /* BaseView */,
+				4BAC71812986BD1E0074FF6D /* Main */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		4BAC71812986BD1E0074FF6D /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				4BAC71A12986DD620074FF6D /* ViewModel */,
+				4BAC719C2986DD1F0074FF6D /* View */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		4BAC71862986BF150074FF6D /* BaseView */ = {
+			isa = PBXGroup;
+			children = (
+				4BAC71872986C3FA0074FF6D /* ViewModel.swift */,
+				4BAC71892986C44C0074FF6D /* BaseViewController.swift */,
+			);
+			path = BaseView;
+			sourceTree = "<group>";
+		};
+		4BAC718F2986D1180074FF6D /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				4BAC71AC2986EA200074FF6D /* DetailUseCase */,
+				4BAC71A22986DF7E0074FF6D /* RecetasUseCase */,
+				4BAC71962986D44E0074FF6D /* UseCase.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		4BAC719C2986DD1F0074FF6D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4BAC71822986BD7F0074FF6D /* MainView.swift */,
+				4BAC712E2986AE380074FF6D /* Main.storyboard */,
+				4BAC719D2986DD460074FF6D /* RecetaTableViewCell.swift */,
+				4BAC719E2986DD460074FF6D /* RecetaTableViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4BAC71A12986DD620074FF6D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				4BAC71842986BF050074FF6D /* MainViewModelImp.swift */,
+				4BAC71982986D9140074FF6D /* MainViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		4BAC71A22986DF7E0074FF6D /* RecetasUseCase */ = {
+			isa = PBXGroup;
+			children = (
+				4BAC71902986D13A0074FF6D /* RecetasUseCase.swift */,
+				4BAC71922986D1B80074FF6D /* RecetasUseCaseImp.swift */,
+				4BAC71942986D3930074FF6D /* RecetasProtocol.swift */,
+			);
+			path = RecetasUseCase;
+			sourceTree = "<group>";
+		};
+		4BAC71A32986E7320074FF6D /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				4BAC71A52986E7460074FF6D /* View */,
+				4BAC71A42986E73D0074FF6D /* ViewModel */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		4BAC71A42986E73D0074FF6D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				4BAC71AA2986E9CD0074FF6D /* DetailViewModel.swift */,
+				4BAC71B82986EC6D0074FF6D /* DetailViewModelImp.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		4BAC71A52986E7460074FF6D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4BAC71A62986E75C0074FF6D /* Detail.storyboard */,
+				4BAC71A82986E8570074FF6D /* DetailView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4BAC71AC2986EA200074FF6D /* DetailUseCase */ = {
+			isa = PBXGroup;
+			children = (
+				4BAC71AD2986EA400074FF6D /* DetailProtocol.swift */,
+				4BAC71AF2986EA610074FF6D /* DetailUseCase.swift */,
+				4BAC71B62986EB6C0074FF6D /* DetailUseCaseImp.swift */,
+			);
+			path = DetailUseCase;
+			sourceTree = "<group>";
+		};
+		4BAC71B12986EA840074FF6D /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				4BAC71B22986EA980074FF6D /* DetailRepository.swift */,
+				4BAC71B42986EAD90074FF6D /* DetailRepositoryImp.swift */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		4BAC71BA298702730074FF6D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4BAC71BB298702840074FF6D /* RecetaData.swift */,
+				4BAC71D62987131D0074FF6D /* RecetaAnnotation.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		4BAC71BD298705AB0074FF6D /* Commons */ = {
+			isa = PBXGroup;
+			children = (
+				4BAC71BE298705D80074FF6D /* UIButtonAccent.swift */,
+				4BAC71C02987074B0074FF6D /* UILabelMultilineTop.swift */,
+			);
+			path = Commons;
+			sourceTree = "<group>";
+		};
+		4BAC71C329870A5C0074FF6D /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				4BAC71C529870A670074FF6D /* ViewModel */,
+				4BAC71C429870A620074FF6D /* View */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
+		4BAC71C429870A620074FF6D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4BAC71CA29870BE30074FF6D /* Map.storyboard */,
+				4BAC71CC29870BF00074FF6D /* MapView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4BAC71C529870A670074FF6D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				4BAC71C629870A930074FF6D /* MapViewModel.swift */,
+				4BAC71C829870AF00074FF6D /* MapViewModelImp.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		4BAC71D829872CC40074FF6D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				4BAC71D929872CD70074FF6D /* MainViewModelTests.swift */,
+				4BAC71DB2987348F0074FF6D /* DetailViewModelTests.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		4BAC71DD298737140074FF6D /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				4BAC71DE2987372A0074FF6D /* RecetasUseCaseTests.swift */,
+				4BAC71E02987384C0074FF6D /* DetailUseCaseTests.swift */,
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
+		A81412C6F0619C9A553A88A5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				46AD3B518530F35AB8382EDA /* Pods_Recetasolger.framework */,
+				36B99DED5F76293A690F3380 /* Pods_Recetasolger_RecetasolgerUITests.framework */,
+				1D3EE4F8F8183E07A8A62C85 /* Pods_RecetasolgerTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -134,9 +548,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4BAC714F2986AE390074FF6D /* Build configuration list for PBXNativeTarget "Recetasolger" */;
 			buildPhases = (
+				2F8A062F8B6CA29018D2287B /* [CP] Check Pods Manifest.lock */,
 				4BAC71212986AE380074FF6D /* Sources */,
 				4BAC71222986AE380074FF6D /* Frameworks */,
 				4BAC71232986AE380074FF6D /* Resources */,
+				D823108B81126E253CC28EB3 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -151,6 +567,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4BAC71522986AE390074FF6D /* Build configuration list for PBXNativeTarget "RecetasolgerTests" */;
 			buildPhases = (
+				18F532082C34E938B9786A92 /* [CP] Check Pods Manifest.lock */,
 				4BAC71372986AE390074FF6D /* Sources */,
 				4BAC71382986AE390074FF6D /* Frameworks */,
 				4BAC71392986AE390074FF6D /* Resources */,
@@ -169,9 +586,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4BAC71552986AE390074FF6D /* Build configuration list for PBXNativeTarget "RecetasolgerUITests" */;
 			buildPhases = (
+				ED814D41371201EE9398E6E9 /* [CP] Check Pods Manifest.lock */,
 				4BAC71412986AE390074FF6D /* Sources */,
 				4BAC71422986AE390074FF6D /* Frameworks */,
 				4BAC71432986AE390074FF6D /* Resources */,
+				63F07810F8B5FFC1F0FE4DA9 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -234,6 +653,9 @@
 				4BAC71352986AE390074FF6D /* LaunchScreen.storyboard in Resources */,
 				4BAC71322986AE390074FF6D /* Assets.xcassets in Resources */,
 				4BAC71302986AE380074FF6D /* Main.storyboard in Resources */,
+				4BAC71A72986E75C0074FF6D /* Detail.storyboard in Resources */,
+				4BAC71A02986DD460074FF6D /* RecetaTableViewCell.xib in Resources */,
+				4BAC71CB29870BE30074FF6D /* Map.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,14 +675,162 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		18F532082C34E938B9786A92 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RecetasolgerTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2F8A062F8B6CA29018D2287B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Recetasolger-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		63F07810F8B5FFC1F0FE4DA9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Recetasolger-RecetasolgerUITests/Pods-Recetasolger-RecetasolgerUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Recetasolger-RecetasolgerUITests/Pods-Recetasolger-RecetasolgerUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Recetasolger-RecetasolgerUITests/Pods-Recetasolger-RecetasolgerUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D823108B81126E253CC28EB3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Recetasolger/Pods-Recetasolger-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Recetasolger/Pods-Recetasolger-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Recetasolger/Pods-Recetasolger-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ED814D41371201EE9398E6E9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Recetasolger-RecetasolgerUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		4BAC71212986AE380074FF6D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4BAC712D2986AE380074FF6D /* ViewController.swift in Sources */,
+				4BAC71C729870A930074FF6D /* MapViewModel.swift in Sources */,
+				4BAC71612986B23A0074FF6D /* CustomError.swift in Sources */,
+				4BAC716A2986B7E00074FF6D /* DictionaryEncoder.swift in Sources */,
+				4BAC719B2986D9490074FF6D /* MainCoordiantorProtocol.swift in Sources */,
+				4BAC71782986BAA00074FF6D /* RecetasRepositoryImp.swift in Sources */,
+				4BAC718A2986C44C0074FF6D /* BaseViewController.swift in Sources */,
+				4BAC716C2986B8190074FF6D /* NetworkManager+Extensions.swift in Sources */,
+				4BAC71CD29870BF00074FF6D /* MapView.swift in Sources */,
+				4BAC715F2986B15D0074FF6D /* Configuration.swift in Sources */,
+				4BAC717D2986BC6C0074FF6D /* Storyboarded.swift in Sources */,
+				4BAC71662986B3400074FF6D /* Log.swift in Sources */,
+				4BAC71992986D9140074FF6D /* MainViewModel.swift in Sources */,
 				4BAC71292986AE380074FF6D /* AppDelegate.swift in Sources */,
+				4BAC71632986B3020074FF6D /* NetworkManager.swift in Sources */,
+				4BAC71912986D13A0074FF6D /* RecetasUseCase.swift in Sources */,
+				4BAC715A2986AEC40074FF6D /* EndPoint.swift in Sources */,
+				4BAC717B2986BC4F0074FF6D /* Coordinator.swift in Sources */,
+				4BAC71742986B99C0074FF6D /* Receta.swift in Sources */,
+				4BAC71BC298702840074FF6D /* RecetaData.swift in Sources */,
+				4BAC71832986BD7F0074FF6D /* MainView.swift in Sources */,
+				4BAC71B02986EA610074FF6D /* DetailUseCase.swift in Sources */,
+				4BAC71AE2986EA400074FF6D /* DetailProtocol.swift in Sources */,
+				4BAC71882986C3FA0074FF6D /* ViewModel.swift in Sources */,
+				4BAC71B52986EAD90074FF6D /* DetailRepositoryImp.swift in Sources */,
+				4BAC71BF298705D80074FF6D /* UIButtonAccent.swift in Sources */,
+				4BAC71852986BF050074FF6D /* MainViewModelImp.swift in Sources */,
+				4BAC71D5298710E40074FF6D /* MapCoordinatorProtocol.swift in Sources */,
+				4BAC718C2986C5D00074FF6D /* SwiftSpinner.swift in Sources */,
+				4BAC71712986B94B0074FF6D /* RecetasRepository.swift in Sources */,
+				4BAC71B32986EA980074FF6D /* DetailRepository.swift in Sources */,
+				4BAC717F2986BC950074FF6D /* MainCoordinator.swift in Sources */,
+				4BAC71682986B7700074FF6D /* NetworkMonitor.swift in Sources */,
+				4BAC71D329870E4E0074FF6D /* CommonCoordiantorProtocol.swift in Sources */,
+				4BAC71C12987074B0074FF6D /* UILabelMultilineTop.swift in Sources */,
+				4BAC71C929870AF00074FF6D /* MapViewModelImp.swift in Sources */,
+				4BAC71D72987131D0074FF6D /* RecetaAnnotation.swift in Sources */,
+				4BAC71952986D3930074FF6D /* RecetasProtocol.swift in Sources */,
+				4BAC71B92986EC6D0074FF6D /* DetailViewModelImp.swift in Sources */,
+				4BAC71B72986EB6C0074FF6D /* DetailUseCaseImp.swift in Sources */,
+				4BAC71A92986E8580074FF6D /* DetailView.swift in Sources */,
+				4BAC71932986D1B80074FF6D /* RecetasUseCaseImp.swift in Sources */,
+				4BAC715D2986AF500074FF6D /* RestClient.swift in Sources */,
+				4BAC71972986D44E0074FF6D /* UseCase.swift in Sources */,
+				4BAC71CF29870D3E0074FF6D /* DetailCoordinatorProtocol.swift in Sources */,
+				4BAC719F2986DD460074FF6D /* RecetaTableViewCell.swift in Sources */,
 				4BAC712B2986AE380074FF6D /* SceneDelegate.swift in Sources */,
+				4BAC71AB2986E9CD0074FF6D /* DetailViewModel.swift in Sources */,
+				4BAC71762986B9EC0074FF6D /* Ubication.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,7 +838,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4BAC71E12987384C0074FF6D /* DetailUseCaseTests.swift in Sources */,
 				4BAC71402986AE390074FF6D /* RecetasolgerTests.swift in Sources */,
+				4BAC71DA29872CD70074FF6D /* MainViewModelTests.swift in Sources */,
+				4BAC71DC2987348F0074FF6D /* DetailViewModelTests.swift in Sources */,
+				4BAC71DF2987372A0074FF6D /* RecetasUseCaseTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -432,16 +1006,17 @@
 		};
 		4BAC71502986AE390074FF6D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 32594D2CF5E6532A44C4522B /* Pods-Recetasolger.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = URYDB6HS29;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Recetasolger/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -459,16 +1034,17 @@
 		};
 		4BAC71512986AE390074FF6D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B2F01E703ECB4682CC3C9766 /* Pods-Recetasolger.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = URYDB6HS29;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Recetasolger/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -486,6 +1062,7 @@
 		};
 		4BAC71532986AE390074FF6D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A8B14BCC9833D9D87C1CA8B6 /* Pods-RecetasolgerTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -505,6 +1082,7 @@
 		};
 		4BAC71542986AE390074FF6D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ADC0395244F82FBB81321D8E /* Pods-RecetasolgerTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -524,6 +1102,7 @@
 		};
 		4BAC71562986AE390074FF6D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3EF1495B394549485D20DC13 /* Pods-Recetasolger-RecetasolgerUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -541,6 +1120,7 @@
 		};
 		4BAC71572986AE390074FF6D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 94D65A5EABF011CE6593A9CD /* Pods-Recetasolger-RecetasolgerUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

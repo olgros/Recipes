@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Map View-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="MapView" id="Y6W-OH-hqX" customClass="MapView" customModule="Recetasolger" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1HR-31-dET">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="rfy-B8-LSd">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
+                                    </mapView>
+                                </subviews>
+                                <color key="backgroundColor" name="BackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="rfy-B8-LSd" firstAttribute="top" secondItem="1HR-31-dET" secondAttribute="top" id="Gs7-Wa-SjL"/>
+                                    <constraint firstAttribute="bottom" secondItem="rfy-B8-LSd" secondAttribute="bottom" id="bXQ-Ge-9Bx"/>
+                                    <constraint firstAttribute="trailing" secondItem="rfy-B8-LSd" secondAttribute="trailing" id="trV-Ic-FIA"/>
+                                    <constraint firstItem="rfy-B8-LSd" firstAttribute="leading" secondItem="1HR-31-dET" secondAttribute="leading" id="zEi-Yn-aon"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" name="BackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="1HR-31-dET" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="R3S-kr-w2I"/>
+                            <constraint firstItem="1HR-31-dET" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" id="aBL-zh-ENf"/>
+                            <constraint firstItem="1HR-31-dET" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="hN7-r8-vVv"/>
+                            <constraint firstItem="1HR-31-dET" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="z7T-k2-dW7"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="map" destination="rfy-B8-LSd" id="sj7-ll-QFN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="121.73913043478262" y="79.6875"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="BackgroundColor">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
