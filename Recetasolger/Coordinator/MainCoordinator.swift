@@ -25,7 +25,7 @@ class MainCoordinator: Coordinator {
     
     func goToMain() {
         let view  =  MainView.instantiate("Main")
-        let useCase = RecetasUseCaseImp(repository: RecetasRepositoryImp())
+        let useCase = RecetasUseCaseImp(repository: RecetasRepositoryImp(), repositoryLocal: RecetasLocalRepositoryImp())
         let viewModel  = MainViewModelImp(coordinator: self, recetasUseCase: useCase)
         view.viewModel = viewModel
         push(view)

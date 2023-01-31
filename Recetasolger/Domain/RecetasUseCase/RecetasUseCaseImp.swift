@@ -12,9 +12,11 @@ class RecetasUseCaseImp: RecetasUseCase {
    
     var delegate: RecetasProtocol?
     var repository: RecetasRepository?
-     
-    init(repository: RecetasRepository){
+    var repositoryLocal: RecetasRepository?
+    
+    init(repository: RecetasRepository, repositoryLocal: RecetasRepository){
         self.repository = repository
+        self.repositoryLocal = repositoryLocal
     }
     
     func getRecetas() {
@@ -33,11 +35,28 @@ class RecetasUseCaseImp: RecetasUseCase {
             self.hideSpinner()
         }
     }
-    
-    func searchRecetas(value: String){
-        repository?.searchRecetas(value: value).done { [unowned self]  recetas in
             
-            self.delegate?.onSuccess(recetas: recetas)
+    func searchRecetas(value: String){
+        
+        repositoryLocal?.getRecetas().done { [unowned self]  recetas in
+            
+            if value == ""{
+                self.delegate?.onSuccess(recetas: recetas)
+                return
+            }
+            
+            let search  = value.lowercased()
+            var recetasSearch = [Receta]()
+            let data = search.split(separator: " ")
+            if data.count > 0 {
+                for item in data {
+                    let recetasFind = recetas.filter{($0.name?.lowercased() ?? "" ).contains(item) || ($0.ingredientes?.lowercased() ?? "" ).contains(item)}
+                    
+                    recetasSearch = append(recetas: recetasSearch, recetasFind: recetasFind)                  
+                   
+                }
+            }            
+            self.delegate?.onSuccess(recetas: recetasSearch)
             
         }.catch { error in
             if let customError = error as? CustomError {
@@ -45,6 +64,20 @@ class RecetasUseCaseImp: RecetasUseCase {
             } else {
                 self.delegate?.onError(title: Constants.information, message: Constants.serverError)
             }
+        } 
+    }
+    
+    
+    func append(recetas:Array<Receta>, recetasFind: Array<Receta>) -> [Receta]{
+        var newRecetas = recetas
+        for item in recetasFind{
+            let exist = newRecetas.filter{$0.id! == item.id}.first
+            if exist == nil {
+                newRecetas.append(item)
+            }
+            
         }
-    }    
+        
+        return newRecetas
+    }
 }

@@ -68,6 +68,7 @@
 		4BAC71DC2987348F0074FF6D /* DetailViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BAC71DB2987348F0074FF6D /* DetailViewModelTests.swift */; };
 		4BAC71DF2987372A0074FF6D /* RecetasUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BAC71DE2987372A0074FF6D /* RecetasUseCaseTests.swift */; };
 		4BAC71E12987384C0074FF6D /* DetailUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BAC71E02987384C0074FF6D /* DetailUseCaseTests.swift */; };
+		4BAC71E4298970CE0074FF6D /* RecetasLocalRepositoryImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BAC71E3298970CE0074FF6D /* RecetasLocalRepositoryImp.swift */; };
 		770854C939BF889E47B18841 /* Pods_RecetasolgerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D3EE4F8F8183E07A8A62C85 /* Pods_RecetasolgerTests.framework */; };
 		7C67D7C895F08BD1C61755FB /* Pods_Recetasolger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46AD3B518530F35AB8382EDA /* Pods_Recetasolger.framework */; };
 		CC0D06A47BE31B3F2995F0D8 /* Pods_Recetasolger_RecetasolgerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36B99DED5F76293A690F3380 /* Pods_Recetasolger_RecetasolgerUITests.framework */; };
@@ -162,6 +163,7 @@
 		4BAC71DE2987372A0074FF6D /* RecetasUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecetasUseCaseTests.swift; sourceTree = "<group>"; };
 		4BAC71E02987384C0074FF6D /* DetailUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailUseCaseTests.swift; sourceTree = "<group>"; };
 		4BAC71E2298739240074FF6D /* Readme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Readme.md; sourceTree = "<group>"; };
+		4BAC71E3298970CE0074FF6D /* RecetasLocalRepositoryImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecetasLocalRepositoryImp.swift; sourceTree = "<group>"; };
 		94D65A5EABF011CE6593A9CD /* Pods-Recetasolger-RecetasolgerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Recetasolger-RecetasolgerUITests.release.xcconfig"; path = "Target Support Files/Pods-Recetasolger-RecetasolgerUITests/Pods-Recetasolger-RecetasolgerUITests.release.xcconfig"; sourceTree = "<group>"; };
 		A8B14BCC9833D9D87C1CA8B6 /* Pods-RecetasolgerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RecetasolgerTests.debug.xcconfig"; path = "Target Support Files/Pods-RecetasolgerTests/Pods-RecetasolgerTests.debug.xcconfig"; sourceTree = "<group>"; };
 		ADC0395244F82FBB81321D8E /* Pods-RecetasolgerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RecetasolgerTests.release.xcconfig"; path = "Target Support Files/Pods-RecetasolgerTests/Pods-RecetasolgerTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -325,6 +327,7 @@
 			children = (
 				4BAC71702986B94B0074FF6D /* RecetasRepository.swift */,
 				4BAC71772986BAA00074FF6D /* RecetasRepositoryImp.swift */,
+				4BAC71E3298970CE0074FF6D /* RecetasLocalRepositoryImp.swift */,
 			);
 			path = Recetas;
 			sourceTree = "<group>";
@@ -820,6 +823,7 @@
 				4BAC71C929870AF00074FF6D /* MapViewModelImp.swift in Sources */,
 				4BAC71D72987131D0074FF6D /* RecetaAnnotation.swift in Sources */,
 				4BAC71952986D3930074FF6D /* RecetasProtocol.swift in Sources */,
+				4BAC71E4298970CE0074FF6D /* RecetasLocalRepositoryImp.swift in Sources */,
 				4BAC71B92986EC6D0074FF6D /* DetailViewModelImp.swift in Sources */,
 				4BAC71B72986EB6C0074FF6D /* DetailUseCaseImp.swift in Sources */,
 				4BAC71A92986E8580074FF6D /* DetailView.swift in Sources */,
@@ -1012,7 +1016,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = URYDB6HS29;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Recetasolger/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -1040,7 +1044,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = URYDB6HS29;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Recetasolger/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

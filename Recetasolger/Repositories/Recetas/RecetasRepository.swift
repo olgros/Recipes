@@ -8,6 +8,5 @@
 import Foundation
 import PromiseKit
 protocol RecetasRepository {
-    func getRecetas() -> Promise <[Receta]>
-    func searchRecetas(value: String) ->  Promise <[Receta]>
+    func getRecetas() -> Promise <[Receta]>   
 }

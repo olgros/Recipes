@@ -28,7 +28,7 @@ class RecetasUseCaseTests: XCTestCase {
     var recetasResponse = [Receta]()
     
     override func setUpWithError() throws {
-        useCase = RecetasUseCaseImp(repository: repository)
+        useCase = RecetasUseCaseImp(repository: repository, repositoryLocal: repository)
         
         useCase?.delegate = self
         
@@ -55,26 +55,41 @@ class RecetasUseCaseTests: XCTestCase {
         
     }
     
-    func testSearchRecetas() throws {
+    func testSearchNameRecetas() throws {
         let nameExpected = "receta1"
         let descriptionExpected = "description1"
         let ingredientesExpected = "ingredientes1"
+                       
+        useCase?.searchRecetas(value: "receta1")
         
-        let nameExpected2 = "receta2"
-        let descriptionExpected2 = "description2"
-        let ingredientesExpected2 = "ingredientes2"
+        wait(for: [expectation], timeout: Constants.timeOutTest)
+        XCTAssertEqual(nameExpected, recetasResponse[0].name, "error nombre")
+        XCTAssertEqual(descriptionExpected, recetasResponse[0].description, "error description")
+        XCTAssertEqual(ingredientesExpected, recetasResponse[0].ingredientes, "error ingredientes")  
         
-        useCase?.searchRecetas(value: "")
+    }
+    
+    func testSearchName() throws {
+        let nameExpected = "receta1"
+        let descriptionExpected = "description1"
+        let ingredientesExpected = "ingredientes1"
+                       
+        useCase?.searchRecetas(value: "ingredientes1")
         
         wait(for: [expectation], timeout: Constants.timeOutTest)
         XCTAssertEqual(nameExpected, recetasResponse[0].name, "error nombre")
         XCTAssertEqual(descriptionExpected, recetasResponse[0].description, "error description")
         XCTAssertEqual(ingredientesExpected, recetasResponse[0].ingredientes, "error ingredientes")
         
-        XCTAssertEqual(nameExpected2, recetasResponse[1].name, "error nombre")
-        XCTAssertEqual(descriptionExpected2, recetasResponse[1].description, "error description")
-        XCTAssertEqual(ingredientesExpected2, recetasResponse[1].ingredientes, "error ingredientes")
+    }
+    
+    func testSearchAll() throws {
+            
+        let totalexpected = 2
+        useCase?.searchRecetas(value: "")
         
+        wait(for: [expectation], timeout: Constants.timeOutTest)
+        XCTAssertEqual(totalexpected, recetasResponse.count, "error nombre")        
     }
 
     func testPerformanceExample() throws {
@@ -105,19 +120,11 @@ class RecetasRepositoryMock2: RecetasRepository {
         return Promise { seal in
             var recetas = [Receta]()
             recetas.append(Receta(id: 1, name: "receta1", image: "url", description: "description1", ubication: Ubication(latitude: 0, longitude: 0), ingredientes: "ingredientes1"))
-            seal.resolve(recetas, nil)
-        }
-    }
-    
-    func searchRecetas(value: String) -> Promise<[Receta]> {
-        return Promise { seal in
-            var recetas = [Receta]()
-            recetas.append(Receta(id: 1, name: "receta1", image: "url", description: "description1", ubication: Ubication(latitude: 0, longitude: 0), ingredientes: "ingredientes1"))
             recetas.append(Receta(id: 2, name: "receta2", image: "url", description: "description2", ubication: Ubication(latitude: 0, longitude: 0), ingredientes: "ingredientes2"))
             
             seal.resolve(recetas, nil)
         }
-    }
+    }       
     
 }
 

@@ -18,10 +18,8 @@ class MainViewModelTests: XCTestCase {
     var  useCase: RecetasUseCase!
     var expectation = XCTestExpectation(description: "MainViewModelTests")
     
-    let statusExpected = "OK"
-    
-    
-    
+    let statusExpected = "OK"    
+        
     var nameResponse = ""
     var descriptionResponse = ""
     var ingredientesResponse = ""
@@ -29,7 +27,7 @@ class MainViewModelTests: XCTestCase {
     var recetasResponse = [Receta]()
     
     override func setUpWithError() throws {       
-        useCase = RecetasUseCaseImp(repository: repository)
+        useCase = RecetasUseCaseImp(repository: repository, repositoryLocal: repository)
         
         viewModel = MainViewModelImp(coordinator: self, recetasUseCase: useCase)
         viewModel?.recetasUseCase?.delegate = self
@@ -67,28 +65,47 @@ class MainViewModelTests: XCTestCase {
         
     }
     
-    func testSearchRecetas() throws {
-        let nameExpected = "receta1"
-        let descriptionExpected = "description1"
-        let ingredientesExpected = "ingredientes1"
+    func testSearchIngredienteRecetas() throws {
         
         let nameExpected2 = "receta2"
         let descriptionExpected2 = "description2"
         let ingredientesExpected2 = "ingredientes2"
         
-        viewModel?.searchRecetas(value: "")
+        viewModel?.searchRecetas(value: "ingredientes2")
         
         wait(for: [expectation], timeout: Constants.timeOutTest)
-        XCTAssertEqual(nameExpected, recetasResponse[0].name, "error nombre")
-        XCTAssertEqual(descriptionExpected, recetasResponse[0].description, "error description")
-        XCTAssertEqual(ingredientesExpected, recetasResponse[0].ingredientes, "error ingredientes")
         
-        XCTAssertEqual(nameExpected2, recetasResponse[1].name, "error nombre")
-        XCTAssertEqual(descriptionExpected2, recetasResponse[1].description, "error description")
-        XCTAssertEqual(ingredientesExpected2, recetasResponse[1].ingredientes, "error ingredientes")
+        XCTAssertEqual(nameExpected2, recetasResponse[0].name, "error nombre")
+        XCTAssertEqual(descriptionExpected2, recetasResponse[0].description, "error description")
+        XCTAssertEqual(ingredientesExpected2, recetasResponse[0].ingredientes, "error ingredientes")
+        
+    }
+    
+    func testSearchNameRecetas() throws {
+        
+        let nameExpected2 = "receta2"
+        let descriptionExpected2 = "description2"
+        let ingredientesExpected2 = "ingredientes2"
+        
+        viewModel?.searchRecetas(value: "receta2")
+        
+        wait(for: [expectation], timeout: Constants.timeOutTest)
+        
+        XCTAssertEqual(nameExpected2, recetasResponse[0].name, "error nombre")
+        XCTAssertEqual(descriptionExpected2, recetasResponse[0].description, "error description")
+        XCTAssertEqual(ingredientesExpected2, recetasResponse[0].ingredientes, "error ingredientes")
         
     }
 
+    func testSearchAll() throws {
+            
+        let totalexpected = 2
+        viewModel?.searchRecetas(value: "")
+        
+        wait(for: [expectation], timeout: Constants.timeOutTest)
+        XCTAssertEqual(totalexpected, recetasResponse.count, "error nombre")
+    }
+    
     func testPerformanceExample() throws {
         // This is an example of a performance test case.
         self.measure {
@@ -134,19 +151,10 @@ class RecetasRepositoryMock: RecetasRepository {
         return Promise { seal in
             var recetas = [Receta]()
             recetas.append(Receta(id: 1, name: "receta1", image: "url", description: "description1", ubication: Ubication(latitude: 0, longitude: 0), ingredientes: "ingredientes1"))
-            seal.resolve(recetas, nil)
-        }
-    }
-    
-    func searchRecetas(value: String) -> Promise<[Receta]> {
-        return Promise { seal in
-            var recetas = [Receta]()
-            recetas.append(Receta(id: 1, name: "receta1", image: "url", description: "description1", ubication: Ubication(latitude: 0, longitude: 0), ingredientes: "ingredientes1"))
             recetas.append(Receta(id: 2, name: "receta2", image: "url", description: "description2", ubication: Ubication(latitude: 0, longitude: 0), ingredientes: "ingredientes2"))
             
             seal.resolve(recetas, nil)
         }
     }
-    
 }
 
