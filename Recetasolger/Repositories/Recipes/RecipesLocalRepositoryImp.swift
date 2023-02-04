@@ -40,8 +40,7 @@ class RecipesLocalRepositoryImp: RecipesRepository {
 
             var resultsRecipes = [ResultRecipe]()
             for item in recipesDetail {
-                resultsRecipes.append(ResultRecipe(id: item.idRecipe, title: item.title, image: item.image, imageType: "jpg"))
-                //recipes.append()
+                resultsRecipes.append(ResultRecipe(id: item.idRecipe, title: item.title, image: item.image, imageType: "jpg"))               
             }
             recipe = Recipe(results: resultsRecipes, offset: 0, number:  recipesDetail.count, totalResults: recipesDetail.count)
             

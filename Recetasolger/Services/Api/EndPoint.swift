@@ -16,7 +16,7 @@ public enum EndPoint {
         case .detail(let id):
            return (.get, "/recipes/\(id)/information?includeNutrition=false&apiKey=\(Configuration.API_KEY)")
         case .recipes(let query):
-            return (.get, "/recipes/complexSearch?query=\(query)&number=20&apiKey=\(Configuration.API_KEY)")
+            return (.get, "/recipes/complexSearch?query=\(query)&number=30&apiKey=\(Configuration.API_KEY)")
         
         }
     }
