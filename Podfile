@@ -12,6 +12,7 @@ target 'Recetasolger' do
   pod 'Toast-Swift', '~> 5.0.1'
   pod 'lottie-ios'
   pod 'AlamofireImage', '~> 4.1'
+  pod 'RealmSwift'
   
   target 'RecetasolgerTests' do
     inherit! :search_paths

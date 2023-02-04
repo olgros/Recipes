@@ -5,6 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -16,85 +17,46 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SBe-PZ-wiW">
-                                <rect key="frame" x="20" y="64" width="374" height="200"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="ltU-Ue-3PA"/>
-                                </constraints>
-                            </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="aRm-SZ-VU4">
-                                <rect key="frame" x="20" y="294" width="374" height="548"/>
+                                <rect key="frame" x="10" y="44" width="394" height="808"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ingredientes:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B1P-gL-b6q">
-                                        <rect key="frame" x="0.0" y="0.0" width="92.5" height="20"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="20" id="FJb-VD-wnC"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ingredientes" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kRk-zB-Gg6">
-                                        <rect key="frame" x="0.0" y="30" width="374" height="100"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="100" id="y7r-DH-u4J"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                        <color key="textColor" name="Gray3Color"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="go4-iY-NwC">
-                                        <rect key="frame" x="0.0" y="140" width="374" height="1"/>
-                                        <color key="backgroundColor" name="Gray1Color"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="1" id="YSf-zi-HRj"/>
-                                        </constraints>
-                                    </view>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EXk-rR-Ict" customClass="UILabelMultilineTop" customModule="Recetasolger" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="151" width="374" height="347"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                        <color key="textColor" name="BlackTextColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Lmj-ZI-LMJ">
+                                        <rect key="frame" x="0.0" y="0.0" width="394" height="758"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </tableView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UW9-lV-r0x" customClass="UIButtonAccent" customModule="Recetasolger" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="508" width="374" height="40"/>
+                                        <rect key="frame" x="0.0" y="768" width="394" height="40"/>
                                         <color key="backgroundColor" name="AccentColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="LgC-GA-dM0"/>
                                         </constraints>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" image="map" catalog="system" title="Ver origen en mapa">
+                                        <buttonConfiguration key="configuration" style="plain" image="heart" catalog="system" title="Guardar en favoritos">
                                             <color key="baseForegroundColor" name="WhiteColor"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <action selector="onNavigateToMap:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="wnT-Jf-Mlp"/>
+                                            <action selector="onSaveFavorite:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="nRz-hr-QNV"/>
                                         </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="UW9-lV-r0x" secondAttribute="trailing" id="BR5-qw-FzP"/>
-                                    <constraint firstAttribute="trailing" secondItem="kRk-zB-Gg6" secondAttribute="trailing" id="evA-um-Hyh"/>
-                                    <constraint firstAttribute="trailing" secondItem="go4-iY-NwC" secondAttribute="trailing" id="htN-H8-PFs"/>
-                                    <constraint firstAttribute="trailing" secondItem="EXk-rR-Ict" secondAttribute="trailing" id="uMx-al-Z3B"/>
+                                    <constraint firstAttribute="trailing" secondItem="Lmj-ZI-LMJ" secondAttribute="trailing" id="F7E-ak-6BI"/>
+                                    <constraint firstAttribute="trailing" secondItem="UW9-lV-r0x" secondAttribute="trailing" id="QBH-8f-qBp"/>
                                 </constraints>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" name="BackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="aRm-SZ-VU4" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="8fi-8C-Shv"/>
-                            <constraint firstItem="SBe-PZ-wiW" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="DV1-zJ-TjL"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="aRm-SZ-VU4" secondAttribute="trailing" constant="20" id="GHC-d7-iDC"/>
-                            <constraint firstItem="SBe-PZ-wiW" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="20" id="KKY-Ff-iM6"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="aRm-SZ-VU4" secondAttribute="bottom" constant="20" id="P6g-Sk-tPt"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="SBe-PZ-wiW" secondAttribute="trailing" constant="20" id="bCS-TA-dtB"/>
-                            <constraint firstItem="aRm-SZ-VU4" firstAttribute="top" secondItem="SBe-PZ-wiW" secondAttribute="bottom" constant="30" id="kGs-5b-gIn"/>
+                            <constraint firstItem="aRm-SZ-VU4" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="10" id="8eZ-Cv-m0l"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="aRm-SZ-VU4" secondAttribute="trailing" constant="10" id="AGX-Ue-rzn"/>
+                            <constraint firstItem="aRm-SZ-VU4" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="COQ-Xh-nTa"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="aRm-SZ-VU4" secondAttribute="bottom" constant="10" id="Wzg-CL-hit"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="descriptionLabel" destination="EXk-rR-Ict" id="r2z-Vl-4b3"/>
-                        <outlet property="imageReceta" destination="SBe-PZ-wiW" id="7tP-3q-iSi"/>
-                        <outlet property="ingredientesLabel" destination="kRk-zB-Gg6" id="Cxz-uu-SC2"/>
+                        <outlet property="btnFavorite" destination="UW9-lV-r0x" id="mfX-Ba-IPt"/>
+                        <outlet property="tableView" destination="Lmj-ZI-LMJ" id="xKc-Z5-Ltx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -103,24 +65,18 @@
         </scene>
     </scenes>
     <resources>
-        <image name="map" catalog="system" width="128" height="110"/>
+        <image name="heart" catalog="system" width="128" height="109"/>
         <namedColor name="AccentColor">
-            <color red="0.99607843137254903" green="0.396078431372549" blue="0.396078431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.99599999189376831" green="0.39599999785423279" blue="0.39599999785423279" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="BackgroundColor">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <namedColor name="BlackTextColor">
-            <color red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="Gray1Color">
-            <color red="0.78823529411764703" green="0.78823529411764703" blue="0.792156862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="Gray3Color">
-            <color red="0.69019607843137254" green="0.69019607843137254" blue="0.69019607843137254" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
         <namedColor name="WhiteColor">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

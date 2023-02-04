@@ -6,7 +6,7 @@
 //
 
 import Foundation
-protocol RecetasProtocol{
-    func onSuccess(recetas: [Receta])
+protocol RecipesProtocol{
+    func onSuccess(recipes: Recipe?)
     func onError(title: String, message: String)
 }

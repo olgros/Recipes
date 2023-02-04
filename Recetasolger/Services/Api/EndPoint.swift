@@ -7,17 +7,16 @@
 
 import Foundation
 public enum EndPoint {
-
-    case recetas
-    case detail(String)
-       
+    
+    case recipes(String)
+    case detail(Int)
+    
     public var resource: EndpointResurce {
         switch self {
-
-        case .recetas:
-           return (.get, "/recetas/list")
-        case .detail(let value):
-           return (.get, "/recetas/detail/\(value)")
+        case .detail(let id):
+           return (.get, "/recipes/\(id)/information?includeNutrition=false&apiKey=\(Configuration.API_KEY)")
+        case .recipes(let query):
+            return (.get, "/recipes/complexSearch?query=\(query)&number=20&apiKey=\(Configuration.API_KEY)")
         
         }
     }

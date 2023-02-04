@@ -10,51 +10,57 @@ import RxSwift
 
 
 class MainViewModelImp: MainViewModel {
-    
+       
     let log  = Log(String(describing: MainViewModelImp.self))
-    var recetasResponse = PublishSubject<[Receta]>()
+    var recetasResponse = PublishSubject<Recipe>()
     
-    var recetasUseCase: RecetasUseCase?
- 
+    var recipesUseCase: RecipesUseCase? 
     var coordinator: MainCoordiantorProtocol?
  
     
-    init(coordinator: MainCoordiantorProtocol, recetasUseCase: RecetasUseCase) {
+    init(coordinator: MainCoordiantorProtocol, recipesUseCase: RecipesUseCase) {
         self.coordinator = coordinator
-        self.recetasUseCase = recetasUseCase
-        self.recetasUseCase?.delegate = self
+        self.recipesUseCase = recipesUseCase
+        self.recipesUseCase?.delegate = self
     }
 
     func viewDidLoad() {
-        getRecetas()
+         getRecipes(query: "")
     }
 
     func viewWillAppear() {
-       
     }
 
     func viewDidAppear() {
-       
     }
     
-    func getRecetas() {
-        recetasUseCase?.getRecetas()
+    func isFavorite() -> Bool{
+        return coordinator is FavoritesCoordinator
     }
     
-    func naviteToDetail(idReceta: Int){
-        coordinator?.navigateToDetail(idReceta: idReceta)
+    func getRecipes(query: String) {
+        recipesUseCase?.getRecipes(query: query)
     }
     
-    func searchRecetas(value: String){
-        recetasUseCase?.searchRecetas(value: value)
+    func naviteToDetail(idRecipe: Int){
+        coordinator?.navigateToDetail(idRecipe: idRecipe)
+    }
+    
+    func searchRecipes(value: String){
+        recipesUseCase?.getRecipes(query: value)
+    }
+    
+    func navigateToFavorites(){
+        coordinator?.navigateToFavorites()
     }
       
 }
 
 
-extension MainViewModelImp: RecetasProtocol {
-    func onSuccess(recetas: [Receta]) {
-        recetasResponse.onNext(recetas)
+extension MainViewModelImp: RecipesProtocol {
+    func onSuccess(recipes: Recipe?) {
+        guard let recipes = recipes else { return }
+        recetasResponse.onNext(recipes)
     }
     
     func onError(title: String, message: String) {

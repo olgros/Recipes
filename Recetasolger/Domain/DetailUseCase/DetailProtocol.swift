@@ -7,6 +7,6 @@
 
 import Foundation
 protocol DetailProtocol{
-    func onSuccess(receta: Receta)
+    func onSuccess(recipeDetail: RecipeDetail)
     func onError(title: String, message: String)
 }

@@ -7,7 +7,8 @@
 
 import Foundation
 protocol DetailUseCase: UseCase{
-    var repository: DetailRepository? {get set}
+    var repository: RecipesRepository? {get set}
     var delegate: DetailProtocol? {get set}
-    func getReceta(_ id: Int)
+    func getRecipeDetail(_ id: Int)
+    func saveFavorite(recipeDetail: RecipeDetail) -> Bool
 }

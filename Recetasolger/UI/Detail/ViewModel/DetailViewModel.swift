@@ -8,7 +8,9 @@
 import Foundation
 import RxSwift
 protocol DetailViewModel: ViewModel {
-    var recetaResponse: PublishSubject<Receta> {get set}
-    func getReceta(_ id: Int)
-    func navigateToMap(receta: Receta?)
+    var detailUseCase: DetailUseCase? {get set}
+    var recipeResponse: PublishSubject<RecipeDetail> {get set}
+    func getRecipeDetail(_ id: Int)
+    func saveFavorite(recipeDetail: RecipeDetail?)   
+    func isFavorite() -> Bool
 }

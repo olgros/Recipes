@@ -10,18 +10,35 @@ class DetailUseCaseImp: DetailUseCase {
     var delegate: DetailProtocol?
    
   
-    var repository: DetailRepository?
+    var repository: RecipesRepository?
     
-    init(repository: DetailRepository){
+    init(repository: RecipesRepository){
         self.repository = repository
     }
     
-    func getReceta(_ id: Int) {
-        if let receta = repository?.getReceta(id) {
-            delegate?.onSuccess(receta: receta)
-        }else{
-            delegate?.onError(title: Constants.information, message: "No se encontró la receta con id:  \(id)")
+    func getRecipeDetail(_ id: Int) {
+        
+        self.showSpinner()
+        repository?.getDetailRecipe(id: id).done { [unowned self]  detailRecipes in
+            if let detail = detailRecipes {
+                self.delegate?.onSuccess(recipeDetail: detail)
+            }else{
+                self.delegate?.onError(title: Constants.information, message: Constants.serverError)
+            }
+        }.catch { error in
+            if let customError = error as? CustomError {
+                self.delegate?.onError(title: Constants.information, message: customError.message ?? Constants.serverError )
+            } else {
+                self.delegate?.onError(title: Constants.information, message: Constants.nofound)
+            }
+
+        }.finally {
+            self.hideSpinner()
         }
+    }
+    
+    func saveFavorite(recipeDetail: RecipeDetail) -> Bool{
+        return repository?.saveFavorite(recipeDetailModel: RecipeDetailModel(recipeDetail: recipeDetail)) ?? false
     }
     
 }

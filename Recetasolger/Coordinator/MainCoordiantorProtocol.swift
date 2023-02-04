@@ -7,5 +7,7 @@
 
 import Foundation
 protocol MainCoordiantorProtocol: CommonCoordiantorProtocol {
-    func navigateToDetail(idReceta: Int)
+    func navigateToDetail(idRecipe: Int)
+    func navigateToFavorites()
+    
 }

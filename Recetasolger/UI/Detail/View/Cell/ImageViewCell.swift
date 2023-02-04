@@ -1,18 +1,16 @@
 //
-//  RecetaTableViewCell.swift
+//  ImageViewCell.swift
 //  Recetasolger
 //
-//  Created by Olger Rosero on 29/01/23.
+//  Created by Olger Rosero on 3/02/23.
 //
 
 import UIKit
 import AlamofireImage
 
-class RecetaTableViewCell: UITableViewCell {
+class ImageViewCell: UITableViewCell {
 
-    @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var imageReceta: UIImageView!
-    
+    @IBOutlet weak var imageRecipe: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -24,27 +22,27 @@ class RecetaTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    var resultRecipe: ResultRecipe? {
-        didSet {
-            guard let resultRecipe = resultRecipe else { return }
-            nameLabel.text = resultRecipe.title
-            
-            let urlImage = resultRecipe.image
-            let url = URL(string: urlImage )!
+    var urlImage: String? {
+        didSet{
+            guard let urlImage = urlImage else { return }
+                       
+            guard let url = URL(string: urlImage ) else { return }
+
             
             let placeholderImage = UIImage(named: "placeholder")!
-
+          
+            
             let filter = AspectScaledToFillSizeWithRoundedCornersFilter(
-                size: imageReceta.frame.size,
+                size: imageRecipe.frame.size,
                 radius: 20.0
             )
 
-            imageReceta.af.setImage(
+            imageRecipe.af.setImage(
                 withURL: url,
                 placeholderImage: placeholderImage,
                 filter: filter
-            )            
-                     
+            )
         }
     }
+    
 }

@@ -7,9 +7,11 @@
 
 import Foundation
 struct Configuration {
-    static let BASE_URL = "http://demo7871011.mockable.io"
+    static let BASE_URL = "https://api.spoonacular.com"
     static let SERVER_ERROE = ""
     static let TOKEN = "123456"
+    static let API_KEY = "5f20e951b30148d9812163a54d5b23d5"
+    
     static let scheme = "dev"
 }
 
@@ -19,5 +21,6 @@ struct Constants {
     static var pleaseWait = "Por favor espere"
     static var information = "Información"
     static var timeOutTest = 60.0
+    static var nofound = "No se encontró la receta"
     
 }

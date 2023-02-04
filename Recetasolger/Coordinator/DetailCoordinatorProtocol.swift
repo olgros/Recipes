@@ -7,5 +7,5 @@
 
 import Foundation
 protocol DetailCoordiantorProtocol: CommonCoordiantorProtocol{
-    func navigateToMap(receta: Receta)
+    
 }

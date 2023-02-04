@@ -1,63 +1,59 @@
 //
-//  MainCoordinator.swift
+//  LocalCoordinator.swift
 //  Recetasolger
 //
-//  Created by Olger Rosero on 29/01/23.
+//  Created by Olger Rosero on 4/02/23.
 //
 
 import Foundation
 import UIKit
-class MainCoordinator: Coordinator {
+class FavoritesCoordinator: Coordinator {
     var childs: [Coordinator] = []
     var navigationController: UINavigationController
     var parentCoordinator: Coordinator?
-    let log  = Log(String(describing: MainCoordinator.self))
+    let log  = Log(String(describing: FavoritesCoordinator.self))
 
     init(navigationController: UINavigationController) {
          self.navigationController = navigationController
      }
 
     func start() {
-        goToMain()              
+        goToFavorites()       
     }
     
-    func goToMain() {
+    func goToFavorites() {
         let view  =  MainView.instantiate("Main")
-        let useCase = RecipesUseCaseImp(repository:RecipesRepositoryImp())
+        let useCase = RecipesUseCaseImp(repository: RecipesLocalRepositoryImp())
         let viewModel  = MainViewModelImp(coordinator: self, recipesUseCase: useCase)
         view.viewModel = viewModel
         push(view)
     }
-    
     func push(_ view: UIViewController) {
         navigationController.pushViewController(view, animated: true)
-    }    
-    
+    }
 }
 
 
-extension MainCoordinator: MainCoordiantorProtocol {
-    func navigateToFavorites() {
-        let favoritesCoordiantor = FavoritesCoordinator(navigationController: navigationController)
-        favoritesCoordiantor.start()
+extension FavoritesCoordinator: MainCoordiantorProtocol {
+    func navigateToFavorites() {        
+
     }
     
     func navigateToDetail(idRecipe: Int) {
         let view  =  DetailView.instantiate("Detail")
-        let useCase = DetailUseCaseImp(repository: RecipesRepositoryImp())
+        let useCase = DetailUseCaseImp(repository: RecipesLocalRepositoryImp())
         let viewModel  = DetailViewModelImp(coordinator: self, detailUseCase: useCase, idRecipe: idRecipe)
         view.viewModel = viewModel
         push(view)
-    }    
+       
+    }
 }
 
-
-extension MainCoordinator: DetailCoordiantorProtocol {    
+extension FavoritesCoordinator: DetailCoordiantorProtocol {
     
 }
 
-
-extension MainCoordinator: CommonCoordiantorProtocol {
+extension FavoritesCoordinator: CommonCoordiantorProtocol {
     func onShowAlertMessage(title: String?, message: String?) {
         guard let title = title else { return }
         guard let message = message else { return }

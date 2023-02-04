@@ -24,6 +24,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window!.rootViewController =  navigationController
         window!.makeKeyAndVisible()
         
+                
+        RunLoop.current.run(until: NSDate(timeIntervalSinceNow:3) as Date)
+        
         return true
     }
 

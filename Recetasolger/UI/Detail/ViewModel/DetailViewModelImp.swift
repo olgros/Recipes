@@ -12,21 +12,21 @@ import RxSwift
 class DetailViewModelImp: DetailViewModel {
      
     let log  = Log(String(describing: DetailViewModelImp.self))
-    var recetaResponse = PublishSubject<Receta>()
+    var recipeResponse = PublishSubject<RecipeDetail>()
     
     var detailUseCase: DetailUseCase?
  
     var coordinator: DetailCoordiantorProtocol?
-    var idReceta: Int?
-    init(coordinator: DetailCoordiantorProtocol, detailUseCase: DetailUseCase, idReceta: Int) {
+    var idRecipe: Int?
+    init(coordinator: DetailCoordiantorProtocol, detailUseCase: DetailUseCase, idRecipe: Int) {
         self.coordinator = coordinator
         self.detailUseCase = detailUseCase
-        self.idReceta = idReceta
+        self.idRecipe = idRecipe
         self.detailUseCase?.delegate = self
     }
 
     func viewDidLoad() {
-        getReceta(idReceta ?? 0)
+        getRecipeDetail(idRecipe ?? 0)
     }
 
     func viewWillAppear() {
@@ -35,25 +35,33 @@ class DetailViewModelImp: DetailViewModel {
 
     func viewDidAppear() {
        
+    }    
+    
+    
+    func isFavorite() -> Bool {
+        return self.coordinator is FavoritesCoordinator
     }
     
-    func getReceta(_ id: Int) {
-        detailUseCase?.getReceta(id)
+    func getRecipeDetail(_ id: Int) {
+        detailUseCase?.getRecipeDetail(id)
     }
     
-    func navigateToMap(receta: Receta?){
-        guard let receta = receta else {
-            coordinator?.onShowAlertMessage(title: Constants.information, message: "No ha seleccionado ninguan receta")
-            return
+    func saveFavorite(recipeDetail: RecipeDetail?){
+        guard let recipe = recipeDetail else { return }
+        if detailUseCase?.saveFavorite(recipeDetail: recipe) ?? false{
+            if isFavorite() {
+                coordinator?.onShowAlertMessage(title: Constants.information, message: "La receta fue eliminada de favoritos")
+            }else{
+                coordinator?.onShowAlertMessage(title: Constants.information, message: "La receta fue guardada en favoritos")
+            }
         }
-        coordinator?.navigateToMap(receta: receta)
     }
-      
+              
 }
 
 extension DetailViewModelImp: DetailProtocol {
-    func onSuccess(receta: Receta) {
-        recetaResponse.onNext(receta)
+    func onSuccess(recipeDetail: RecipeDetail) {
+        recipeResponse.onNext(recipeDetail)
     }
     func onError(title: String, message: String) {
         coordinator?.onShowAlertMessage(title: title, message: message)
